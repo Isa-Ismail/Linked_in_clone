@@ -1,3 +1,4 @@
+import { signOut } from 'next-auth/react'
 import Head from 'next/head'
 import Image from 'next/image'
 
@@ -12,7 +13,9 @@ export default function Home() {
       </Head>
       
       <main>
-        Sleep you Asshole
+        <button onClick = {signOut}>
+          sign out
+        </button>
       </main>
 
       <footer>

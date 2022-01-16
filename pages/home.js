@@ -14,7 +14,7 @@ function HomePage() {
                 <title>LinkedIn</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <header className = 'flex justify-self-center py-3.5 px-3.5'>
+            <header className = 'flex justify-around py-3.5 px-3.5'>
                 <div className = "relative w-36 h-10 ">
                     <Image src="https://rb.gy/vtbzlp" layout="fill" objectFit="contain" />
                 </div>

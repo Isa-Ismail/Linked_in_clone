@@ -1,7 +1,7 @@
-function HeaderLink() {
+function HeaderLink({Icon, text}) {
     return (
         <div>
-            Hello
+            <h1>{text}</h1>
         </div>
     )
 }

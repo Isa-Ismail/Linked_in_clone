@@ -12,7 +12,7 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
-  secret: JWT_SECRET,
+  secret: process.env.JWT_SECRET,
   adapter: MongoDBAdapter(clientPromise),
   pages: {
       signIn: "/home",

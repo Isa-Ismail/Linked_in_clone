@@ -17,7 +17,7 @@ function HomePage({providers}) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <header className = 'flex justify-around py-3.5 px-10 bg-violet-50'>
+            <header className = 'flex justify-around py-3.5 px-10'>
                 <div className = "relative w-36 h-10 cursor-pointer">
                     <Link href = '/'>
                         <Image src="https://rb.gy/vtbzlp" layout="fill" objectFit="contain" />
@@ -38,7 +38,7 @@ function HomePage({providers}) {
                                     className="text-blue-700 font-semibold rounded-full border border-blue-700 px-5 py-1.5 transition-all hover:border-2"
                                     onClick={() => signIn(provider.id, { callbackUrl: "/" })}
                                     >
-                                    Sign in
+                                    Sign in with {provider.id}
                                     </button>
                                 </div>
                             </div>

@@ -1,7 +1,8 @@
 import '../styles/globals.css'
 import { useEffect } from 'react'
+import { SessionProvider } from "next-auth/react"
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   
   useEffect(() => {
     const jssStyles = document.querySelector('#jss-server-side');
@@ -9,8 +10,12 @@ function MyApp({ Component, pageProps }) {
       jssStyles.parentElement.removeChild(jssStyles);
     }
   }, []);
-
-  return <Component {...pageProps} />
+  
+  return (
+    <SessionProvider session={session} refetchInterval={5 * 60}>
+      <Component {...pageProps} />
+    </SessionProvider>
+  )
 }
 
 export default MyApp
